@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Horloge en JavaScript</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <div class="clock">
+            <div class="hour">
+                <div class="heures" id="heures"></div>
+            </div>
+            <div class="min">
+                <div class="minutes" id="minutes"></div>
+            </div>
+            <div class="sec">
+                <div class="secondes" id="secondes"></div>
+            </div>
+        </div>
+        <div class="toggleClass" onclick="toggleClass()"></div>
+        <script type="text/javascript">
+            function toggleClass() {
+                const body = document.querySelector('body');
+                body.classList.toggle('light');
+            }
+            const deg = 6;
+            const heures = document.querySelector('#heures');
+            const minutes = document.querySelector('#minutes');
+            const secondes = document.querySelector('#secondes');
+
+            setInterval(() => {
+
+                let day = new Date();
+                let hh = day.getHours() * 30;
+                let mm = day.getMinutes() * deg;
+                let ss = day.getSeconds() * deg;
+
+                heures.style.transform = `rotateZ(${(hh) + (mm / 12)}deg)`;
+                minutes.style.transform = `rotateZ(${mm}deg)`;
+                secondes.style.transform = `rotateZ(${ss}deg)`;
+            })
+        </script>
+
+    </body>
+
+</html>
