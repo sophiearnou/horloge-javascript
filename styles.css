@@ -59,20 +59,25 @@ body.light .clock:before {
     position: absolute;
 }
 
-.clock .hour, .hr{
+.clock .hour,
+.heures {
     width: 160px;
     height: 160px;
 }
-.clock .min, .mn{
+.clock .min,
+.minutes {
     width: 190;
     height: 190;
 }
-.clock .sec, .sc{
+.clock .sec,
+.secondes {
     width: 230px;
     height: 230px;
 }
 
-.hr, .mn, .sc{
+.heures,
+.minutes,
+.secondes {
     display: flex;
     justify-content: center;
     /* align-items: center; */
@@ -80,7 +85,7 @@ body.light .clock:before {
     border-radius: 50%;
 }
 
-.hr:before{
+.heures:before {
     content: '';
     position: absolute;
     width: 8px;
@@ -90,7 +95,7 @@ body.light .clock:before {
     border-radius: 6px 6px 0 0;
 }
 
-.mn:before{
+.minutes:before {
     content: '';
     position: absolute;
     width: 4px;
@@ -100,10 +105,10 @@ body.light .clock:before {
     z-index: 11;
     border-radius: 6px 6px 0 0;
 }
-body.light .mn:before{
+body.light .minutes:before {
     background: #091921;
 }
-.sc:before{
+.secondes:before {
     content: '';
     position: absolute;
     width: 2px;
